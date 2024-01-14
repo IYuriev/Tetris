@@ -87,9 +87,10 @@ function draw() {
     drawPlayfield();
     drawTetromino();
     drawGhostTetromino();
+    document.getElementById('cleared-lines-counter').textContent = `Cleared Lines: ${tetris.clearedLines}`;
 }
 
-    function drawPlayfield() {
+function drawPlayfield() {
     for (let row = 0; row < PLAYFIELD_ROWS; row++) {
         for (let column = 0; column < PLAYFIELD_COLUMNS; column++){
             if (!tetris.playField[row][column]) continue;
